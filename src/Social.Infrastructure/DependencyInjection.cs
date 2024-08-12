@@ -1,7 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Social.Application.Core.Abstractions.Data;
+using Social.Domain.Users;
 using Social.Infrastructure.Database;
+using Social.Infrastructure.Repositories;
 
 namespace Social.Infrastructure;
 
@@ -16,6 +19,18 @@ public static class DependencyInjection
             options.UseSqlServer(ConnectionString);
         });
 
+        services.AddScoped<IDbContext>(serviceProvider => serviceProvider.GetRequiredService<AppDbContext>());
+
+        services.AddScoped<IDbContext>(serviceProvider => serviceProvider.GetRequiredService<AppDbContext>());
+
+
+
+        services.AddScoped<IUserRepository, UserRepository>();
+
+        services.AddScoped<IUserRepository, UserRepository>();
+
+
+        services.AddAuthentication().AddCookie().
 
         return services;
     }

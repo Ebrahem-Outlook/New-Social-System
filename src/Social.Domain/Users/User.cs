@@ -5,7 +5,7 @@ namespace Social.Domain.Users;
 
 public sealed class User : AggregateRoot
 {
-    public User(string firstName, string lastName, string userName, string email, string passwordHash)
+    private User(string firstName, string lastName, string userName, string email, string passwordHash)
         : base(Guid.NewGuid())
     {
         FirstName = firstName;
@@ -16,8 +16,6 @@ public sealed class User : AggregateRoot
     }
 
     private User() : base() { }  
-
-      
 
     public string FirstName { get; private set; } = default!;
     public string LastName { get; private set; } = default!;

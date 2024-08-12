@@ -47,5 +47,8 @@ internal sealed class UserConfiguration : IEntityTypeConfiguration<User>
                .HasColumnName(nameof(User.PasswordHash))
                .HasMaxLength(255)
                .IsRequired();
+
+        // Configuration DomainEvent.
+        builder.Ignore(user => user.DomainEvents);
     }
 }
