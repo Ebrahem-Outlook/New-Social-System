@@ -10,5 +10,5 @@ public interface IPasswordHasher
     /// </summary>
     /// <param name="password"></param>
     /// <returns></returns>
-    string HashPassword(string password);
+    Task<string> HashPassword(string password);
 }
