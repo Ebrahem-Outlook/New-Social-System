@@ -22,16 +22,16 @@ jobs:
           dotnet-version: '8.x'  # Specify .NET 8 SDK version
 
       - name: Install dependencies
-        run: dotnet restore
+        run: dotnet restore MySolution.sln  # Specify the solution file
 
       - name: Build
-        run: dotnet build --configuration Release
+        run: dotnet build MySolution.sln --configuration Release --no-restore  # Specify the solution file
 
       - name: Run tests
-        run: dotnet test --configuration Release --no-build --verbosity normal
+        run: dotnet test MySolution.sln --configuration Release --no-build --verbosity normal  # Specify the solution file
 
       - name: Publish
-        run: dotnet publish --configuration Release --output ./publish
+        run: dotnet publish MySolution.sln --configuration Release --output ./publish --no-build  # Specify the solution file
 
   deploy:
     runs-on: ubuntu-latest
