@@ -1,5 +1,4 @@
 ﻿using Social.Domain.Users;
-using Social.Domain.Users.Events;
 
 namespace Social.Domain.Test.Users;
 
