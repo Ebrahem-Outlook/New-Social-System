@@ -3,9 +3,83 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.Domain", "Social.Domain\Social.Domain.csproj", "{BC8FF70A-3ADC-4CBD-BF1F-3C4687B34DFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.Application", "Social.Application\Social.Application.csproj", "{9C4C20A4-A71E-48FE-8B3D-6EA8C1AE248B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.API", "Social.API\Social.API.csproj", "{972D3D8F-811F-4394-91D9-E1E0104CB7E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.Infrastructure", "Social.Infrastructure\Social.Infrastructure.csproj", "{D1276192-907C-4A20-8279-0B42E3E69ED1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B7ECC56B-BBC7-4CAB-A133-0E61194B6162}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{C73D889B-3F56-44E0-96CD-D1CD7FE457B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.Application.Test", "Social.Application.Test\Social.Application.Test.csproj", "{AEA332EF-F237-47EC-8F18-59580AEAC682}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.Domain.Test", "Social.Domain.Test\Social.Domain.Test.csproj", "{B9EA1E91-2B46-4373-8895-41FDDD21B511}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.Infrastructure.Test", "Social.Infrastructure.Test\Social.Infrastructure.Test.csproj", "{CFCD33E6-3416-47D3-B461-7EDD9F7A03E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.API.Test", "Social.API.Test\Social.API.Test.csproj", "{765A1DFE-0395-4514-8DAE-9D96759CB734}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{0849F264-0A28-4BBE-ADA8-505FF629BAC4}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC8FF70A-3ADC-4CBD-BF1F-3C4687B34DFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC8FF70A-3ADC-4CBD-BF1F-3C4687B34DFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC8FF70A-3ADC-4CBD-BF1F-3C4687B34DFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC8FF70A-3ADC-4CBD-BF1F-3C4687B34DFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C4C20A4-A71E-48FE-8B3D-6EA8C1AE248B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C4C20A4-A71E-48FE-8B3D-6EA8C1AE248B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C4C20A4-A71E-48FE-8B3D-6EA8C1AE248B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C4C20A4-A71E-48FE-8B3D-6EA8C1AE248B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{972D3D8F-811F-4394-91D9-E1E0104CB7E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{972D3D8F-811F-4394-91D9-E1E0104CB7E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{972D3D8F-811F-4394-91D9-E1E0104CB7E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{972D3D8F-811F-4394-91D9-E1E0104CB7E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1276192-907C-4A20-8279-0B42E3E69ED1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1276192-907C-4A20-8279-0B42E3E69ED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1276192-907C-4A20-8279-0B42E3E69ED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1276192-907C-4A20-8279-0B42E3E69ED1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEA332EF-F237-47EC-8F18-59580AEAC682}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEA332EF-F237-47EC-8F18-59580AEAC682}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEA332EF-F237-47EC-8F18-59580AEAC682}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEA332EF-F237-47EC-8F18-59580AEAC682}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9EA1E91-2B46-4373-8895-41FDDD21B511}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9EA1E91-2B46-4373-8895-41FDDD21B511}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9EA1E91-2B46-4373-8895-41FDDD21B511}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9EA1E91-2B46-4373-8895-41FDDD21B511}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFCD33E6-3416-47D3-B461-7EDD9F7A03E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFCD33E6-3416-47D3-B461-7EDD9F7A03E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFCD33E6-3416-47D3-B461-7EDD9F7A03E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFCD33E6-3416-47D3-B461-7EDD9F7A03E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{765A1DFE-0395-4514-8DAE-9D96759CB734}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{765A1DFE-0395-4514-8DAE-9D96759CB734}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{765A1DFE-0395-4514-8DAE-9D96759CB734}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{765A1DFE-0395-4514-8DAE-9D96759CB734}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0849F264-0A28-4BBE-ADA8-505FF629BAC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0849F264-0A28-4BBE-ADA8-505FF629BAC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0849F264-0A28-4BBE-ADA8-505FF629BAC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0849F264-0A28-4BBE-ADA8-505FF629BAC4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BC8FF70A-3ADC-4CBD-BF1F-3C4687B34DFF} = {B7ECC56B-BBC7-4CAB-A133-0E61194B6162}
+		{9C4C20A4-A71E-48FE-8B3D-6EA8C1AE248B} = {B7ECC56B-BBC7-4CAB-A133-0E61194B6162}
+		{972D3D8F-811F-4394-91D9-E1E0104CB7E4} = {B7ECC56B-BBC7-4CAB-A133-0E61194B6162}
+		{D1276192-907C-4A20-8279-0B42E3E69ED1} = {B7ECC56B-BBC7-4CAB-A133-0E61194B6162}
+		{AEA332EF-F237-47EC-8F18-59580AEAC682} = {C73D889B-3F56-44E0-96CD-D1CD7FE457B8}
+		{B9EA1E91-2B46-4373-8895-41FDDD21B511} = {C73D889B-3F56-44E0-96CD-D1CD7FE457B8}
+		{CFCD33E6-3416-47D3-B461-7EDD9F7A03E5} = {C73D889B-3F56-44E0-96CD-D1CD7FE457B8}
+		{765A1DFE-0395-4514-8DAE-9D96759CB734} = {C73D889B-3F56-44E0-96CD-D1CD7FE457B8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EC530588-564F-4260-BEBE-2DFA632E1FDE}

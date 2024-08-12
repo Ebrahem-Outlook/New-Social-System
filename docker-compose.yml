@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  social.api:
+    image: ${DOCKER_REGISTRY-}socialapi
+    build:
+      context: .
+      dockerfile: Social.API/Dockerfile
