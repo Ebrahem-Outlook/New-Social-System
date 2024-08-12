@@ -15,8 +15,9 @@ public sealed class User : AggregateRoot
         PasswordHash = passwordHash;
     }
 
-    private User() : base() { }
+    private User() : base() { }  
 
+      
 
     public string FirstName { get; private set; } = default!;
     public string LastName { get; private set; } = default!;
