@@ -17,6 +17,7 @@ public sealed class User : AggregateRoot
 
     private User() : base() { }
 
+
     public string FirstName { get; private set; } = default!;
     public string LastName { get; private set; } = default!;
     public string UserName { get; private set; } = default!;
