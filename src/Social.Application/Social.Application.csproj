@@ -18,6 +18,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Messages\Commands\" />
+    <Folder Include="Messages\Events\" />
+    <Folder Include="Messages\Queries\" />
+    <Folder Include="Orders\Commands\" />
+    <Folder Include="Orders\Events\" />
+    <Folder Include="Orders\Queries\" />
+    <Folder Include="Posts\Commands\" />
+    <Folder Include="Posts\Events\" />
+    <Folder Include="Posts\Queries\" />
     <Folder Include="Users\Events\EmailUpdated\" />
     <Folder Include="Users\Events\PasswordUpdated\" />
     <Folder Include="Users\Events\UserDeleted\" />
