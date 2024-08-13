@@ -22,9 +22,6 @@
     <Folder Include="Users\Events\PasswordUpdated\" />
     <Folder Include="Users\Events\UserDeleted\" />
     <Folder Include="Users\Events\UserUpdated\" />
-    <Folder Include="Users\Queries\GetById\" />
-    <Folder Include="Users\Queries\GetByUserName\" />
-    <Folder Include="Users\Queries\GetByName\" />
   </ItemGroup>
 
 </Project>

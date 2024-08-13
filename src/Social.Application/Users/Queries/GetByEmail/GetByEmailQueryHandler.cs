@@ -14,6 +14,6 @@ internal sealed class GetByEmailQueryHandler : IQueryHandler<GetByEmailQuery, Us
 
     public async Task<User> Handle(GetByEmailQuery request, CancellationToken cancellationToken)
     {
-        return await _userRepository.GetByEmailAsync(request.Email, cancellationToken);
+        return await _userRepository.GetByEmailAsync(request.Email, cancellationToken) ?? default!;
     }
 }
