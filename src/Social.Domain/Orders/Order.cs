@@ -25,7 +25,7 @@ public sealed class Order : AggregateRoot
 
     public static Order Create(Guid userId, List<OrderItem> orderItems)
     {
-        Order order = new Order(userId, orderItems, (List<OrderItem> items) => items.Sum(order => order.Price));
+        Order order = new Order(userId, orderItems, items => items.Sum(order => order.Price));
 
         order.RaiseDomainEvent(new OrderCreatedDomainEvent(order));
 

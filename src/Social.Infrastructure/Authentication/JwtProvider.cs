@@ -20,6 +20,7 @@ internal sealed class JwtProvider : IJwtProvider
     {
         var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.SecurityKey));
 
+        return string.Empty;
 
     }
 }

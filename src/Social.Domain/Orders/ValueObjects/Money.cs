@@ -1,14 +1,18 @@
 ﻿using Social.Domain.Core.BaseType;
-using System.Text;
 
 namespace Social.Domain.Orders.ValueObjects;
 
 public sealed class Money : ValueObject
 {
-    public Money(decimal price)
+    private Money(decimal price)
     {
         Price = price;
     }
 
     public decimal Price { get; private set; }
+
+    public static Money Create(decimal price)
+    {
+        return new Money(price);
+    }
 }

@@ -5,13 +5,12 @@ namespace Social.Domain.Messages;
 
 public sealed class Message : AggregateRoot
 {
-    private Message(Guid userSendId, Guid userReceiveId, string messageBody, bool isReaded )
+    private Message(Guid userSendId, Guid userReceiveId, string messageBody)
         : base(Guid.NewGuid())
     {
         UserSendId = userSendId;
         UserReceiveId = userReceiveId;
         MessageBody = messageBody;
-        IsReaded = isReaded;
         SendOnUtc = DateTime.UtcNow;
     }
 
@@ -20,17 +19,14 @@ public sealed class Message : AggregateRoot
     public Guid UserSendId { get; }
     public Guid UserReceiveId { get; }
     public string MessageBody { get; } = default!;
-    public bool IsReaded { get; private set; }
     public DateTime SendOnUtc { get; }
 
-    public static Message Create(Guid userSendId, Guid userReceiveId, string messageBody, bool isReaded)
+    public static Message Create(Guid userSendId, Guid userReceiveId, string messageBody)
     {
-        Message message = new Message(userSendId, userReceiveId, messageBody, isReaded);
+        Message message = new Message(userSendId, userReceiveId, messageBody);
 
         message.RaiseDomainEvent(new MessageSendedDomainEvent(message));
 
         return message;
     }
-
-
 }

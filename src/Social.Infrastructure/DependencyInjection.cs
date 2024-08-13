@@ -30,7 +30,7 @@ public static class DependencyInjection
         services.AddScoped<IUserRepository, UserRepository>();
 
 
-        services.AddAuthentication().AddCookie().
+        
 
         return services;
     }

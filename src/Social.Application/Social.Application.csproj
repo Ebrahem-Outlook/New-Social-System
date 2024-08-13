@@ -7,15 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Messages\**" />
-    <Compile Remove="Orders\**" />
-    <EmbeddedResource Remove="Messages\**" />
-    <EmbeddedResource Remove="Orders\**" />
-    <None Remove="Messages\**" />
-    <None Remove="Orders\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Social.Domain\Social.Domain.csproj" />
   </ItemGroup>
 
@@ -27,10 +18,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Users\Events\EmailUpdated\" />
-    <Folder Include="Users\Events\PasswordUpdated\" />
-    <Folder Include="Users\Events\UserDeleted\" />
-    <Folder Include="Users\Events\UserUpdated\" />
+    <Folder Include="Messages\Commands\UpdateMessage\" />
+    <Folder Include="Messages\Events\MessageCreated\" />
+    <Folder Include="Messages\Events\MessageUpdated\" />
+    <Folder Include="Messages\Events\MessageDeleted\" />
+    <Folder Include="Messages\Queries\GetAll\" />
+    <Folder Include="Messages\Queries\GetById\" />
+    <Folder Include="Messages\Queries\GetByName\" />
   </ItemGroup>
 
 </Project>
